@@ -1,0 +1,75 @@
+<div class="product_table">
+  <table class="table_product">
+    <tr>
+      <th>ProductId</th>
+      <th>ColorIdx</th>
+      <th>ProductCode</th>
+      <th>ProductDescription</th>
+      <th>Price</th>
+      <th>VoDatum</th>
+      <th>IsHeavy</th>
+      <th>RestrictedLands</th>
+      <th>IsFsk</th>
+      <th>IsOrdergruppeC</th>
+    </tr>
+    <tr *ngFor="let d of data" (click)="showProduct(d)">
+      <td>{{ d.ProductId }}</td>
+      <td>{{ d.ColorIdx }}</td>
+      <td>{{ d.ProductCode }}</td>
+      <td>{{ d.ProductDescription }}</td>
+      <td>{{ d.Price }}</td>
+      <td>{{ d.VoDatum }}</td>
+      <td>{{ d.IsHeavy }}</td>
+      <td>{{ d.RestrictedLands }}</td>
+      <td>{{ d.IsFsk }}</td>
+      <td>{{ d.IsOrdergruppeC }}</td>
+    </tr>
+  </table>
+
+  <table class="table_show" *ngIf="show; else noProduct">
+    <tr>
+      <th>ProductId</th>
+      <td>{{ showData.ProductId }}</td>
+    </tr>
+    <tr>
+      <th>ColorIdx</th>
+      <td>{{ showData.ColorIdx }}</td>
+    </tr>
+    <tr>
+      <th>ProductCode</th>
+      <td>{{ showData.ProductCode }}</td>
+    </tr>
+    <tr>
+      <th>ProductDescription</th>
+      <td>{{ showData.ProductDescription }}</td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td>{{ showData.Price }}</td>
+    </tr>
+    <tr>
+      <th>VoDatum</th>
+      <td>{{ showData.VoDatum }}</td>
+    </tr>
+    <tr>
+      <th>IsHeavy</th>
+      <td>{{ showData.IsHeavy }}</td>
+    </tr>
+    <tr>
+      <th>RestrictedLands</th>
+      <td>{{ showData.RestrictedLands }}</td>
+    </tr>
+    <tr>
+      <th>IsFsk</th>
+      <td>{{ showData.IsFsk }}</td>
+    </tr>
+    <tr>
+      <th>IsOrdergruppeC</th>
+      <td>{{ showData.IsOrdergruppeC }}</td>
+    </tr>
+    <button class="rm" (click)="close()">Close</button>
+  </table>
+  <ng-template #noProduct>
+    <p style="text-align: center">it's unknown</p>
+  </ng-template>
+</div>

@@ -1,0 +1,36 @@
+.product_table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.table_product {
+  width: 40%;
+  margin: 10px;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.table_show {
+  border-collapse: collapse;
+  height: 100%;
+  position: relative;
+  margin: 10px;
+
+  width: 40%;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.rm {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  padding: 7px 15px;
+}
