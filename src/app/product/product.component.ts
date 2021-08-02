@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
   showData: any;
   show!: boolean;
 
-  constructor(private productService: ProductService) {}
+  constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
     this.productService.fetchData().subscribe((data) => {
@@ -26,6 +26,6 @@ export class ProductComponent implements OnInit {
   }
 
   close() {
-    this.show = false;
+    this.showData = '';
   }
 }

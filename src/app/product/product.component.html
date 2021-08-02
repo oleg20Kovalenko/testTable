@@ -26,7 +26,7 @@
     </tr>
   </table>
 
-  <table class="table_show" *ngIf="show; else noProduct">
+  <table class="table_show" *ngIf='showData?.ProductId; else noProduct'>
     <tr>
       <th>ProductId</th>
       <td>{{ showData.ProductId }}</td>
@@ -69,7 +69,8 @@
     </tr>
     <button class="rm" (click)="close()">Close</button>
   </table>
+
   <ng-template #noProduct>
-    <p style="text-align: center">it's unknown</p>
+    <p class="text">it's unknown</p>
   </ng-template>
 </div>
