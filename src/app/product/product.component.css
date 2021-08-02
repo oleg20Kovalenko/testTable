@@ -1,24 +1,27 @@
 .product_table {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  padding: 0 10px;
+  max-width: 100%;
 }
 
-.table_product {
-  width: 40%;
-  margin: 10px;
+
+.table_product,
+.table_show {
+  width: 50%;
+  max-width: 50%;
   border-collapse: collapse;
   cursor: pointer;
 }
 
+.table_product {
+  margin-right: 10px;
+}
+
 .table_show {
-  border-collapse: collapse;
   height: 100%;
   position: relative;
-  margin: 10px;
+  margin-left: 10px;
 
-  width: 40%;
 }
 
 th,
